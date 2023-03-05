@@ -55,55 +55,58 @@ class SettingPage extends StatelessWidget {
             style: TextStyle(fontWeight: FontWeight.w400, fontSize: 19)),
       ),
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            IconText(
-                s1: "Assets/dpwhats.jpeg",
-                s2: "Whatseey",
-                s3: "Can't talk,WhatsApp only",
-                flag: 4,
-                greenBorder: 0,
-                incomingFlag: 0),
-            Divider(
-              thickness: 0.1,
-              color: Colors.grey,
-            ),
-            ListView.builder(
-                shrinkWrap: true,
-                itemCount: 9,
-                itemBuilder: ((context, index) {
-                  return ListTile(
-                    onTap: () {},
-                    title: Text(
-                      list.elementAt(index).title,
-                      style: TextStyle(color: Colors.black, fontSize: 17),
-                    ),
-                    subtitle: Text(
-                      list.elementAt(index).subtitle,
+        child: Container(
+          color: Colors.white,
+          child: Column(
+            children: [
+              IconText(
+                  s1: "Assets/dpwhats.jpeg",
+                  s2: "Whatseey",
+                  s3: "Can't talk,WhatsApp only",
+                  flag: 4,
+                  greenBorder: 0,
+                  incomingFlag: 0),
+              Divider(
+                thickness: 0.1,
+                color: Colors.grey,
+              ),
+              ListView.builder(
+                  shrinkWrap: true,
+                  itemCount: 9,
+                  itemBuilder: ((context, index) {
+                    return ListTile(
+                      onTap: () {},
+                      title: Text(
+                        list.elementAt(index).title,
+                        style: TextStyle(color: Colors.black, fontSize: 17),
+                      ),
+                      subtitle: Text(
+                        list.elementAt(index).subtitle,
+                        style: TextStyle(color: Colors.grey, fontSize: 12),
+                      ),
+                      leading: list.elementAt(index).icon,
+                    );
+                  })),
+              Container(
+                height: 100,
+                child: Column(
+                  children: [
+                    Text(
+                      "from",
                       style: TextStyle(color: Colors.grey, fontSize: 12),
                     ),
-                    leading: list.elementAt(index).icon,
-                  );
-                })),
-            Container(
-              height: 100,
-              child: Column(
-                children: [
-                  Text(
-                    "from",
-                    style: TextStyle(color: Colors.grey, fontSize: 12),
-                  ),
-                  Text(
-                    "♾️ Dummy",
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold),
-                  )
-                ],
+                    Text(
+                      "♾️ Dummy",
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             ),
             PopupMenuButton(
                 onSelected: (selected) {
-                  if (selected == 5)
+                  if (selected == 6)
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => SettingPage()),
@@ -100,7 +100,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                         ),
                       ),
                       PopupMenuItem(
-                        value: 5,
+                        value: 6,
                         child: Text(
                           "Settings",
                           style: TextStyle(
